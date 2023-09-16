@@ -1,0 +1,28 @@
+package main
+
+import "fmt"
+
+func main() {
+	// sample 1
+	for i := 0; i < 5; i++ {
+		fmt.Printf("Looping %d\n", i)
+	}
+	// sample 2
+	j := 0
+	for j < 5 {
+		fmt.Printf("Looping %d\n", j)
+		j += 1
+	}
+	// sample 3
+	i := 0
+	for {
+		if i == 2 {
+		} else if i == 5 {
+			break
+		} else {
+			fmt.Printf("Looping %d\n", i)
+		}
+		i++
+	}
+
+}

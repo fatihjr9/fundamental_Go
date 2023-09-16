@@ -1,0 +1,31 @@
+package main
+
+import "fmt"
+
+func main() {
+	// conditional if
+	age := 19
+
+	if age < 18 {
+		fmt.Printf("Belum cukup umur\n")
+	} else if age > 60 {
+		fmt.Printf("Ketuaan\n")
+	} else {
+		fmt.Printf("Selamat datang! \n")
+	}
+
+	// switch
+	grade := "F"
+	switch grade {
+	case "A":
+		fmt.Printf("gokil \n")
+	case "B", "C":
+		fmt.Printf("Keren \n")
+		fmt.Printf("Semangat belajar lagi \n")
+	case "F":
+		fmt.Printf("Gagal total \n")
+		fallthrough
+	default:
+		fmt.Printf("Ulangi tesnya")
+	}
+}

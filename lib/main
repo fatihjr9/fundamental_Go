@@ -1,0 +1,55 @@
+package main
+
+import (
+	"errors"
+	"fmt"
+)
+
+func main() {
+	var variableName1 string = "hello world"
+	variableName2 := "Hello world"
+
+	fmt.Println(variableName1)
+	fmt.Println(variableName2)
+
+	// Primitive: boolean, int, float, string
+
+	// boolean
+	boolVar := true
+	fmt.Printf("Type: %T Value: %v\n", boolVar, boolVar)
+	// int
+	intVar := int(5)
+	fmt.Printf("Type: %T Value: %v\n", intVar, intVar)
+	// float
+	floatVar1 := float32(3.2)
+	floatVar2 := float64(3.2)
+	fmt.Printf("Type: %T Value: %v\n", floatVar1, floatVar1)
+	fmt.Printf("Type: %T Value: %v\n", floatVar2, floatVar2)
+	// byte
+	byteVar := byte(255)
+	fmt.Printf("Type: %T Value: %v\n", byteVar, byteVar)
+
+	byteVar2 := []byte("hello World")
+	fmt.Printf("Type: %T Value: %v\n", byteVar2, byteVar2)
+
+	// complex
+	complexVar := -7 + 3i
+	fmt.Printf("Type: %T Value: %v\n", complexVar, complexVar)
+
+	// error
+	errVar := errors.New("error detected")
+	fmt.Printf("Type: %T Value: %v\n", errVar, errVar)
+
+	// interface
+	var myInterfaceVar interface{}
+	myInterfaceVar = 5
+	fmt.Printf("Type: %T Value: %v\n", myInterfaceVar, myInterfaceVar)
+	myInterfaceVar = "hello world"
+	fmt.Printf("Type: %T Value: %v\n", myInterfaceVar, myInterfaceVar)
+
+}
+
+type MethodList interface {
+	myFunction()
+	myFunction2(int) int
+}
